@@ -1,0 +1,6 @@
+Get a list of all airports in Kadeton
+
+select code, long_name from airports join cities on airports.city_id = cities.id where cities.name = 'Kadeton';
+
+code,long_name
+JEQ,Kadeton Probably International Airport

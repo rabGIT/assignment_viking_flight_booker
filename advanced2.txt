@@ -1,0 +1,5 @@
+How many flights have round trips possible? In other words, we want the count of all airports where there exists a flight FROM that airport and a later flight TO that airport.
+
+select * from flights as outbound join flights as inbound on outbound.origin_id = inbound.destination_id where outbound.destination_id = inbound.origin_id
+
+answer is none where it is a direct round trip

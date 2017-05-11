@@ -1,0 +1,56 @@
+Get a list of all airports visited by user Krystel Senger after January 1, 2012. (Hint, see if you can get a list of all ticket IDs first).
+
+SELECT
+	origin.long_name AS origin_airport,
+	dest.long_name AS destination_airport
+FROM
+	flights
+JOIN airports AS dest ON flights.destination_id = dest. ID
+JOIN airports AS origin ON flights.origin_id = origin. ID
+JOIN tickets ON flights. ID = tickets.flight_id
+JOIN itineraries ON tickets.itinerary_id = itineraries. ID
+JOIN users ON itineraries.user_id = users. ID
+WHERE
+	users.first_name = 'Krystel'
+AND users.last_name = 'Senger'
+AND departure_time > '1/1/2012';
+
+
+origin_airport,destination_airport
+West Jolie Probably International Airport,Port Zion Probably International Airport
+Lake Gia Probably International Airport,Willmsview Probably International Airport
+Jakobshire Probably International Airport,East Odell Probably International Airport
+Homenicktown Probably International Airport,Zechariahton Probably International Airport
+Camrynhaven Probably International Airport,Wymanstad Probably International Airport
+Lake Sister Probably International Airport,Hettingerchester Probably International Airport
+Chelsiechester Probably International Airport,Schulistburgh Probably International Airport
+Ubaldostad Probably International Airport,Lake Micaelaview Probably International Airport
+North Hayleeshire Probably International Airport,New Johnathonchester Probably International Airport
+Justinemouth Probably International Airport,South Janiehaven Probably International Airport
+Pascaleshire Probably International Airport,Lake Orlando Probably International Airport
+Port Colt Probably International Airport,West Sabrynaland Probably International Airport
+Port Gabriellaside Probably International Airport,Wiegandhaven Probably International Airport
+New Toyville Probably International Airport,Flatleychester Probably International Airport
+Novellaland Probably International Airport,West Treystad Probably International Airport
+McClurechester Probably International Airport,Bridiefort Probably International Airport
+North Dariushaven Probably International Airport,North Judy Probably International Airport
+Schmidtfurt Probably International Airport,Lilianchester Probably International Airport
+Maybellborough Probably International Airport,Martineland Probably International Airport
+Dimitriside Probably International Airport,Ziemeton Probably International Airport
+Port Citlalli Probably International Airport,McKenzieside Probably International Airport
+South Cole Probably International Airport,Wilhelmineburgh Probably International Airport
+Anibalside Probably International Airport,Wardshire Probably International Airport
+Rowlandstad Probably International Airport,Heidenreichton Probably International Airport
+Ullrichfort Probably International Airport,North Iva Probably International Airport
+Lake Pierremouth Probably International Airport,Wendellville Probably International Airport
+New Matt Probably International Airport,Lake Chaim Probably International Airport
+Gutmannfurt Probably International Airport,Port Graysonview Probably International Airport
+North Hayleyfurt Probably International Airport,Jaysonfurt Probably International Airport
+Dachview Probably International Airport,East Milesfort Probably International Airport
+Braunfurt Probably International Airport,New Lewis Probably International Airport
+East Ward Probably International Airport,Reggietown Probably International Airport
+East Prince Probably International Airport,West Hesterfurt Probably International Airport
+Camronchester Probably International Airport,North Lysanneton Probably International Airport
+North Maciefurt Probably International Airport,Corwinmouth Probably International Airport
+Port Olinport Probably International Airport,South Susana Probably International Airport
+Edgardoton Probably International Airport,Arnaldoborough Probably International Airport

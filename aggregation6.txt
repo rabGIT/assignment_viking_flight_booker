@@ -1,0 +1,6 @@
+Return the range of lengths of flights in the system(the maximum, and the minimum).
+
+select min(distance), max(distance) from flights
+
+min,max
+100,600

@@ -1,0 +1,17 @@
+Find the shortest flight that username 'zora_johnson' took.
+
+SELECT
+	flights.*
+FROM
+	flights
+JOIN tickets ON flights. ID = tickets.flight_id
+JOIN itineraries ON tickets.itinerary_id = itineraries. ID
+JOIN users ON itineraries.user_id = users. ID
+WHERE
+	users.username = 'zora_johnson'
+ORDER BY
+	distance ASC
+LIMIT 1
+
+id,origin_id,destination_id,departure_time,arrival_time,price,created_at,updated_at,airline_id,distance
+62664,26027,24053,03/11/2011 11:49:53.207156,03/11/2011 18:19:53.207156,147.5,03/24/2017 04:05:48.780572,03/24/2017 04:05:48.780572,107,134

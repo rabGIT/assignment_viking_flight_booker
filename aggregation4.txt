@@ -1,0 +1,23 @@
+Find the 3 users who spent the most money on flights in 2013
+
+SELECT
+	username,
+	SUM(price) AS total
+FROM
+	users
+JOIN itineraries ON itineraries.user_id = users. ID
+JOIN tickets ON tickets.itinerary_id = itineraries. ID
+JOIN flights ON flights. ID = tickets.flight_id
+WHERE
+	flights.departure_time BETWEEN '1/1/2013'
+AND '12/31/2013'
+GROUP BY
+	username
+ORDER BY
+	total DESC
+LIMIT 3
+
+username,total
+esperanza,14531.53
+kyle,12309.42
+shaniya,11992.2

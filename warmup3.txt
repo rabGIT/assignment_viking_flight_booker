@@ -1,0 +1,8 @@
+Get a list of all payment methods used on itineraries by the user with email address 'senger.krystel@marvin.io'
+
+
+select payment_method from itineraries join users on itineraries.user_id = users.id where email = 'senger.krystel@marvin.io' group by payment_method;
+
+payment_method
+Cash
+MasterCard

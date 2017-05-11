@@ -1,0 +1,67 @@
+Find the average cost of a flight itinerary for users in each state in 2012.
+
+SELECT
+	states.name, avg(price)
+FROM
+	flights
+JOIN tickets ON flights. ID = tickets.flight_id
+JOIN itineraries ON tickets.itinerary_id = itineraries. ID
+JOIN users ON itineraries.user_id = users. ID
+JOIN states on users.state_id = states.id
+where flights.departure_time between '1/1/12' and '12/31/12'
+group by states.name
+order by states.name
+
+name,avg
+Alabama,485.382105263158
+Alaska,488.486031746032
+Arizona,495.480751879699
+Arkansas,480.271782178218
+California,475.891971830986
+Carolina,467.860992907801
+Colorado,536.406756756757
+Connecticut,482.201044776119
+Dakota,509.391888111888
+Delaware,517.675762711865
+Florida,467.127865168539
+Georgia,438.142115384615
+Hampshire,435.072857142857
+Hawaii,461.315806451613
+Idaho,474.363827160494
+Illinois,423.160508474576
+Indiana,464.82625
+Iowa,471.387222222222
+Island,500.412564102564
+Jersey,468.912159090909
+Kansas,505.14034883721
+Kentucky,467.381485148515
+Louisiana,440.200181818182
+Maine,463.861641791045
+Maryland,495.00303030303
+Massachusetts,468.798947368421
+Mexico,492.434905660377
+Michigan,472.7652
+Minnesota,483.17511627907
+Mississippi,451.817
+Missouri,473.331232876712
+Montana,504.796
+Nebraska,411.422222222222
+Nevada,478.677209302326
+New,474.057869415808
+North,466.621
+Ohio,472.906470588235
+Oklahoma,442.682
+Oregon,491.366551724138
+Pennsylvania,488.755
+Rhode,497.298936170213
+South,473.988189655173
+Tennessee,494.515223880597
+Texas,471.143563218391
+Utah,503.236732673267
+Vermont,486.855438596491
+Virginia,484.900882352941
+Washington,480.581614906832
+West,501.070625
+Wisconsin,398.614666666667
+Wyoming,457.279367088608
+York,446.268734177215

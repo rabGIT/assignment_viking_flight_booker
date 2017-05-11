@@ -1,0 +1,17 @@
+Find the cheapest flight that was taken by a user who only had one itinerary.
+
+SELECT
+	users.username, min(price) as cost, count(*) as total
+FROM
+	flights
+JOIN tickets ON flights. ID = tickets.flight_id
+JOIN itineraries ON tickets.itinerary_id = itineraries. ID
+JOIN users ON itineraries.user_id = users. ID
+group by users.username
+order by total, cost
+
+limit 1
+
+
+username,cost,total
+savanna,209.97,1

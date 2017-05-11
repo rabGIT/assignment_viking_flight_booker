@@ -1,0 +1,13 @@
+Count all flights to OR from the city of Smithshire that did not land in Delaware
+
+SELECT
+	count(*)
+FROM
+	flights
+JOIN airports AS dest ON flights.destination_id = dest. ID
+JOIN airports AS origin ON flights.origin_id = origin. ID
+where (dest.id = (select id from cities where name = 'Smithshire') or origin.id = (select id from cities where name = 'Smithshire')) and (dest.state_id != (select id from states where name = 'Delaware')) and (origin.state_id != (select id from states where name = 'Delaware'))
+
+
+count
+4

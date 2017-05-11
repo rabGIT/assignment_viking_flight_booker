@@ -1,0 +1,14 @@
+Get a list of all users in California
+
+select first_name, last_name from users join states on users.state_id = states.id where states.name = 'California';
+
+
+first_name,last_name
+Vicenta,O'Hara
+Katelynn,Shields
+Summer,O'Keefe
+Blanca,Price
+Brandt,Herzog
+Arnulfo,Gusikowski
+Geovanni,Hayes
+Moriah,Leffler

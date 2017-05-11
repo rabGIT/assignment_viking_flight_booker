@@ -1,0 +1,25 @@
+Find the most popular travel destination for users who live in California.
+
+SELECT
+	destination.name, count(*)
+FROM
+	flights
+JOIN tickets ON flights. ID = tickets.flight_id
+JOIN itineraries ON tickets.itinerary_id = itineraries. ID
+JOIN users ON itineraries.user_id = users. ID
+JOIN states as home on users.state_id = home.id
+JOIN airports on flights.destination_id = airports.id
+JOIN states as destination on airports.state_id = destination.id
+WHERE
+	home.name = 'California'
+group by destination.name
+order by count desc
+
+name,count
+New,2
+Carolina,1
+Colorado,1
+Arizona,1
+Hampshire,1
+Kansas,1
+Georgia,1

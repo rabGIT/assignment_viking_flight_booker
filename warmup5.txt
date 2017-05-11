@@ -1,0 +1,27 @@
+Find a list of all Airport names and codes which connect to the airport coded LYT.
+
+
+select code, long_name from flights join airports on flights.destination_id = airports.city_id where flights.origin_id in (select id from airports where code = 'LYT') ;
+
+code,long_name
+YQY,Crystalberg Probably International Airport
+XVC,New Filibertoside Probably International Airport
+TSP,Taraland Probably International Airport
+ZCD,West Quintenland Probably International Airport
+FXQ,South Steve Probably International Airport
+UEQ,Feeneychester Probably International Airport
+HWF,West Estrella Probably International Airport
+YMZ,Yostberg Probably International Airport
+FXL,Lemkemouth Probably International Airport
+NQJ,North Josianne Probably International Airport
+QAJ,East Aglaeport Probably International Airport
+UCD,West Lillyville Probably International Airport
+WFE,Christiansenfort Probably International Airport
+VGP,New Norbert Probably International Airport
+VQK,Omaview Probably International Airport
+CYQ,East Normaton Probably International Airport
+ZKU,East Gennaroside Probably International Airport
+YMO,North Rebekah Probably International Airport
+SNK,New Helgahaven Probably International Airport
+ABT,New Ruby Probably International Airport
+BKD,Sauerburgh Probably International Airport

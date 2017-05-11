@@ -1,0 +1,35 @@
+Find the average flight distance for every city in California
+
+SELECT
+	cities. NAME,
+	AVG(flights.distance)
+FROM
+	flights
+JOIN airports ON flights.origin_id = airports. ID
+JOIN states ON airports.state_id = states. ID
+JOIN cities ON airports.city_id = cities. ID
+WHERE
+	states. NAME = 'California'
+GROUP BY
+	cities. NAME
+
+
+name,avg
+East Alessiaport,139
+East Loren,163.5
+Edisonville,362
+Jakaylaburgh,102
+Kiehntown,399
+Lake Keanuborough,365
+Leannonshire,502
+Matildefort,490.5
+Nelleberg,341
+New Loy,343.75
+North Herminio,476
+Port Cotyburgh,458.5
+Port Jaymeland,292.3333333333333333
+Port Moriah,276
+Sageville,490
+South Bertrand,537
+Violettechester,373
+West Garret,357

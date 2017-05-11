@@ -1,0 +1,8 @@
+Get a list of prices of all flights whose origins are in Kochfurt Probably International Airport.
+
+select * from flights join airports on flights.origin_id = airports.city_id where long_name = 'Kochfurt Probably International Airport';
+
+id,origin_id,destination_id,departure_time,arrival_time,price,created_at,updated_at,airline_id,distance,id(2),city_id,state_id,code,long_name,created_at(2),updated_at(2)
+61182,2141,27219,10/31/2012 02:13:19.801755,10/31/2012 05:53:19.801755,341.25,03/24/2017 04:05:11.518301,03/24/2017 04:05:11.518301,95,189,2141,2141,636,FIV,Kochfurt Probably International Airport,03/24/2017 03:03:16.701535,03/24/2017 03:03:16.701535
+64412,2141,18557,08/19/2012 14:21:12.72388,08/19/2012 16:55:12.72388,781.37,03/24/2017 04:06:31.106652,03/24/2017 04:06:31.106652,114,439,2141,2141,636,FIV,Kochfurt Probably International Airport,03/24/2017 03:03:16.701535,03/24/2017 03:03:16.701535
+79871,12269,25776,10/23/2011 19:28:29.078765,10/24/2011 02:15:29.078765,716.91,03/24/2017 04:12:44.602642,03/24/2017 04:12:44.602642,113,262,12269,12269,749,FTV,Kochfurt Probably International Airport,03/24/2017 03:30:32.449505,03/24/2017 03:30:32.449505
